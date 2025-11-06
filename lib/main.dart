@@ -1,12 +1,5 @@
-//Kevin Nivesela
 import 'package:flutter/material.dart';
-import 'package:menudrawer/src/inicio.dart';
-import 'package:menudrawer/src/notificacion.dart';
-import 'package:menudrawer/src/perfil.dart';
-import 'package:menudrawer/src/siguiente.dart';
-import 'package:menudrawer/src/navbar.dart';
-import 'package:menudrawer/src/configuracion.dart';
-import 'package:menudrawer/src/acerca.dart';
+import 'src/navbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,18 +12,30 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Menú Drawer con Rutas',
-      theme: ThemeData(primarySwatch: Colors.deepPurple),
-      initialRoute: '/inicio', // ✅ Ruta inicial
-      routes: {
-        '/inicio': (context) => const InicioPage(),
-        '/perfil': (context) => const PerfilPage(),
-        '/notificacion': (context) => const NotificacionPage(),
-        '/siguiente': (context) => const SiguientePage(),
-        '/navbar': (context) => const Navbar(),
-        '/configuracion': (context) => const ConfiguracionPage(),
-        '/acerca': (context) => const AcercaPage(),
-      },
+      title: 'Gestor de Barbería',
+      theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xFFF8F9FA),
+        colorScheme: const ColorScheme(
+          brightness: Brightness.light,
+          primary: Color(0xFF0D1B2A), // Azul marino
+          onPrimary: Colors.white,
+          secondary: Color(0xFFB08968), // Beige oscuro
+          onSecondary: Colors.white,
+          error: Colors.redAccent,
+          onError: Colors.white,
+          background: Color(0xFFF8F9FA),
+          onBackground: Color(0xFF0D1B2A),
+          surface: Color(0xFFDDBEA9), // Beige claro
+          onSurface: Colors.black87,
+        ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF0D1B2A),
+          foregroundColor: Colors.white,
+          elevation: 3,
+        ),
+        useMaterial3: true,
+      ),
+      home: const Navbar(),
     );
   }
 }
