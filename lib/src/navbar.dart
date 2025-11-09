@@ -5,6 +5,11 @@ import 'pages/citas_page.dart';
 import 'pages/barberos_page.dart';
 import 'pages/configuracion_page.dart';
 
+// 🔹 Nuevas páginas para las funciones agregadas
+import 'pages/camara_page.dart';
+import 'pages/gps_page.dart';
+import 'pages/qr_page.dart';
+
 class Navbar extends StatefulWidget {
   const Navbar({super.key});
 
@@ -15,12 +20,16 @@ class Navbar extends StatefulWidget {
 class _NavbarState extends State<Navbar> {
   int index = 0;
 
+  // 🔹 Agregamos las nuevas páginas aquí
   final List<Widget> pages = const [
     InicioPage(),
     ClientesPage(),
     CitasPage(),
     BarberosPage(),
     ConfiguracionPage(),
+    CamaraPage(),
+    GPSPage(),
+    QRPage(),
   ];
 
   @override
@@ -64,6 +73,13 @@ class _NavbarState extends State<Navbar> {
             _buildItem(Icons.calendar_month, 'Citas', 2),
             _buildItem(Icons.people_alt, 'Barberos', 3),
             _buildItem(Icons.settings, 'Configuración', 4),
+
+            const Divider(),
+
+            // 🔹 Nuevas opciones del Drawer
+            _buildItem(Icons.camera_alt, 'Uso de Cámara', 5),
+            _buildItem(Icons.location_on, 'GPS / Ubicación', 6),
+            _buildItem(Icons.qr_code_scanner, 'Lector QR', 7),
           ],
         ),
       ),

@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
@@ -31,7 +18,21 @@
 
   <title>menudrawer</title>
   <link rel="manifest" href="manifest.json">
+
+  <!-- ✅ Script oficial de Google Maps -->
+  <!-- Reemplaza TU_API_KEY_AQUI por tu clave real -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZvVewnLsvZuyiewnrgwJyiNY8ODbNdC8"
+    defer
+  ></script>
+
+  <!-- (Opcional) Soporte para Marker Clusterer -->
+  <script
+    src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"
+    defer
+  ></script>
 </head>
+
 <body>
   <script src="flutter_bootstrap.js" async></script>
 </body>

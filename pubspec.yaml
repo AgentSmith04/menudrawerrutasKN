@@ -35,6 +35,19 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
 
+  # Uso de cámara
+  camera: ^0.11.1+2
+
+  #google maps
+  google_maps_flutter: ^2.7.0
+
+  # Uso de GPS / ubicación
+  geolocator: ^12.0.0
+
+  # Lectura de códigos QR
+  mobile_scanner: ^7.1.3
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
